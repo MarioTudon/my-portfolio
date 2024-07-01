@@ -1,0 +1,224 @@
+:root {
+    --primary1: #036564;
+    --primary2: #033649;
+    --primary3: #031634;
+    --complementary1: #cdb380;
+    --complementary2: #e8ddcb;
+    --white: #f5f9fa;
+    --white2: #ebf3f5;
+    --gray: #e1e4e5;
+    --gray2: #c0c6c9;
+    --gray3: #4b4c4d;
+    --black: #323333;
+    --black2: #2a2b2b;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 14px;
+    background-color: var(--complementary2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h2,
+h3,
+h4 {
+    letter-spacing: 0.3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h1,
+h3 {
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+html {
+    height: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary1);
+    color: var(--white2);
+
+    #foto-perfil {
+        width: 40%;
+        height: auto;
+        border-radius: 50%;
+        border: 5px solid var(--black);
+        margin: 30px 0 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin: 5px 0;
+    }
+
+    hr {
+        height: 0.25rem;
+        width: 50%;
+        border: 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--primary2), rgba(0, 0, 0, 0));
+    }
+
+    h3 {
+        margin: 20px 0 0;
+    }
+
+    nav {
+        margin: 20px 0;
+
+        a {
+            padding: 5px 10px;
+            transition: font-size 0.25s ease;
+        }
+
+        a:hover {
+            background-color: var(--primary2);
+            border-radius: 10%;
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.about-me {
+    hr {
+        height: 0.1rem;
+        width: 50%;
+        border: 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--complementary1), rgba(0, 0, 0, 0));
+    }
+
+    p {
+        text-align: justify;
+        font-weight: 500;
+        padding: 10px 25px;
+        margin: 0;
+    }
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .project-card {
+        margin: 10px 0;
+        img {
+            width: 80%;
+            border-radius: 5%;
+        }
+    }
+
+    hr {
+        height: 0.1rem;
+        width: 50%;
+        border: 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--complementary1), rgba(0, 0, 0, 0));
+    }
+
+}
+
+.skills {
+    margin: 10px 0 50px;
+
+    h2 {
+        padding: 30px 0 0;
+    }
+
+    hr {
+        height: 0.1rem;
+        width: 50%;
+        border: 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--complementary1), rgba(0, 0, 0, 0));
+    }
+
+    .skills-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 20px;
+
+        .skill-card {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 20%;
+            padding: 10px 0;
+            margin: 10px;
+            box-shadow: 0.2rem 0.2rem 0.3rem;
+
+            img {
+                width: 75%;
+            }
+        }
+    }
+}
+
+.contact {
+    width: 100%;
+    padding: 20px 0;
+    h2 {
+        padding: 20px 0 0;
+        margin: 0;
+    }
+
+    hr {
+        height: 0.1rem;
+        width: 50%;
+        border: 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--complementary1), rgba(0, 0, 0, 0));
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        label{
+            font-size: 1.1rem;
+            margin: 10px 0;
+            input{
+                border-radius: 10px;
+            }
+        }
+        button{
+            background-color: var(--primary1);
+            border: none;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            color: var(--white2);
+            font-size: 1.25rem;
+        }
+    }
+}
+
+footer{
+    background-color: var(--primary3);
+    width: 100%;
+    color: var(--white2);
+    font-weight: 600;
+    padding: 10px 0;
+}
