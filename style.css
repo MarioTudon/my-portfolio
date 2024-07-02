@@ -63,8 +63,9 @@ header {
     align-items: center;
     background-color: var(--primary1);
     color: var(--white2);
+    width: 100%;
 
-    #foto-perfil {
+    #profile-picture {
         width: 40%;
         height: auto;
         border-radius: 50%;
@@ -124,8 +125,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .project-card {
         margin: 10px 0;
+
         img {
             width: 80%;
             border-radius: 5%;
@@ -180,6 +183,7 @@ header {
 .contact {
     width: 100%;
     padding: 20px 0;
+
     h2 {
         padding: 20px 0 0;
         margin: 0;
@@ -196,14 +200,29 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        label{
+
+        label {
+            display: flex;
+            flex-direction: column;
             font-size: 1.1rem;
             margin: 10px 0;
-            input{
+            width: 200px;
+
+            input {
                 border-radius: 10px;
+                border: none;
+                background-color: var(--complementary1);
+            }
+
+            textarea {
+                height: 100px;
+                border-radius: 10px;
+                border: none;
+                background-color: var(--complementary1);
             }
         }
-        button{
+
+        button {
             background-color: var(--primary1);
             border: none;
             margin: 10px 0;
@@ -211,14 +230,176 @@ header {
             border-radius: 10px;
             color: var(--white2);
             font-size: 1.25rem;
+            transition: font-size 0.5s, background-color 0.25s ease;
+        }
+
+        button:hover {
+            font-size: 1.5rem;
+            background-color: var(--primary2);
         }
     }
 }
 
-footer{
+footer {
     background-color: var(--primary3);
     width: 100%;
     color: var(--white2);
     font-weight: 600;
     padding: 10px 0;
+}
+
+@media only screen and (min-width: 500px) {
+    body {
+        display: grid;
+        grid-template-columns: 30% 70%;
+
+        h2 {
+            font-size: 3rem;
+        }
+    }
+
+    header {
+        height: 100%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 6;
+
+        .float {
+            position: fixed;
+        }
+
+        #profile-picture {
+            width: 45%;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        nav {
+            display: grid;
+            row-gap: 10px;
+
+            a {
+                display: inline-block;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .about-me,
+    .projects,
+    .skills,
+    .contact {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .about-me {
+        p {
+            padding: 20px 300px 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+
+    .projects {
+
+        .project-card {
+            margin: 10px 0;
+
+            img {
+                width: 55%;
+                border-radius: 5%;
+            }
+        }
+    }
+
+    .skills {
+        .skills-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 0 300px;
+
+            .skill-card {
+                span {
+                    background-color: var(--primary3);
+                    opacity: 0.7;
+                    color: var(--white2);
+                    position: absolute;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    padding: 5px 20px;
+                    border-radius: 15px;
+                    opacity: 0;
+                    transform: scale(0.5);
+                    transition: transform 0.25s, opacity 0.2s ease;
+                }
+
+                span:after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: var(--primary3) transparent transparent;
+                }
+
+                transition: transform 0.25s ease;
+            }
+
+            .skill-card:hover {
+                transform: scale(1.1);
+
+                span {
+                    opacity: 0.7;
+                    transform: translateY(-60px) scale(1);
+                }
+            }
+        }
+    }
+
+    .contact {
+
+        form {
+            label {
+                display: flex;
+                flex-direction: column;
+                font-size: 1.1rem;
+                margin: 10px 0;
+                width: 500px;
+
+                input {
+                    border-radius: 10px;
+                    border: none;
+                    background-color: var(--complementary1);
+                    font-size: 1rem;
+                    padding: 5px;
+                }
+
+                textarea {
+                    height: 100px;
+                    border-radius: 10px;
+                    border: none;
+                    background-color: var(--complementary1);
+                    font-size: 1rem;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+
+    footer {
+        z-index: 2;
+        height: 70px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
 }
