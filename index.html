@@ -14,28 +14,31 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Mario Tudon</title>
+    <title>Mario Tudón</title>
 </head>
 
 <body>
     <header>
-        <img id="foto-perfil" src="assets/images/foto_mario-tudon.jpg" alt="Mi foto">
-        <h1>Mario Tudon</h1>
-        <hr />
-        <h3>Software Engineer</h3>
-        <nav>
-            <a href="#about-me">About me</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="float">
+            <img id="profile-picture" src="assets/images/foto_mario-tudon.jpg" alt="Mi foto">
+            <h1>Mario Tudón</h1>
+            <hr />
+            <h3>Software Engineer</h3>
+            <nav>
+                <a href="#about-me">About me</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
     <section class="about-me">
         <a name="about-me"></a>
         <h2>About me</h2>
         <hr />
         <p>
-            I am a passionate self-taught software engineer with a great enthusiasm for technology and programming. Despite having no formal experience in the industry, I have dedicated countless
+            I am a passionate self-taught software engineer with a great enthusiasm for technology and programming.
+            Despite having no formal experience in the industry, I have dedicated countless
             hours to learn and hone my software development skills independently.
         </p>
         <p>
@@ -44,7 +47,7 @@
         </p>
     </section>
     <section class="projects">
-        <a name="projects"></a>
+        <a name="projects" title="Projects"></a>
         <h2>Projects</h2>
         <hr />
         <div class="project-card">
@@ -63,31 +66,20 @@
         <hr />
         <div class="skills-content">
             <div class="skill-card">
+                <span>HTML</span>
                 <img src="assets/images/skillset/html.svg" alt="html">
             </div>
             <div class="skill-card">
+                <span>CSS</span>
                 <img src="assets/images/skillset/css.svg" alt="css">
             </div>
             <div class="skill-card">
-                <img src="assets/images/skillset/react.svg" alt="react">
-            </div>
-            <div class="skill-card">
-                <img src="assets/images/skillset/git.svg" alt="git">
-            </div>
-            <div class="skill-card">
-                <img src="assets/images/skillset/bash.svg" alt="bash">
-            </div>
-            <div class="skill-card">
-                <img src="assets/images/skillset/npm.svg" alt="npm">
-            </div>
-            <div class="skill-card">
-                <img src="assets/images/skillset/node.svg" alt="node">
-            </div>
-            <div class="skill-card">
-                <img src="assets/images/skillset/js.svg" alt="js">
-            </div>
-            <div class="skill-card">
+                <span>Unity</span>
                 <img src="assets/images/skillset/unity.svg" alt="unity">
+            </div>
+            <div class="skill-card">
+                <span>GIT</span>
+                <img src="assets/images/skillset/git.svg" alt="git">
             </div>
         </div>
     </section>
@@ -99,6 +91,10 @@
             <label>
                 Your email:
                 <input type="email" name="_replyto">
+            </label>
+            <label>
+                Your message:
+                <textarea name="message"></textarea>
             </label>
             <button type="submit">Send</button>
         </form>
