@@ -7,6 +7,7 @@
     --background-color-4: #46494f;
     --background-color-5: #71757e;
     --background-color-6: #8d919b;
+    --background-color-7: #bec3cf;
     --social-icon-color: #7f8591;
     --text-hover-color: #e7e7e8;
     --effect-hover-color: #8e94a0;
@@ -243,19 +244,29 @@ h3 {
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: var(--background-color-6);
+            background-color: var(--background-color-7);
             margin: 1rem;
             padding: 1.1rem;
             border-radius: 50%;
             span {
                 position: absolute;
                 color: var(--text-2);
-                background-color: var(--background-color-4);
+                background-color: var(--background-color-5);
                 padding: 0.5rem 0.25rem;
                 border-radius: 0.5rem;
-                opacity: 0.78;
+                opacity: 0.7;
                 transform: scale(0) translateY(-3rem);
                 transition: 0.25s;
+            }
+            span:after {
+                content:"";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -0.25rem;
+                border-width: 0.25rem;
+                border-style: solid;
+                border-color: var(--background-color-5) transparent transparent transparent;
             }
         }
         .skill-card:hover {
