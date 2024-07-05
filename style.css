@@ -38,7 +38,8 @@ html {
 
 body {
     min-height: 100vh;
-    background: linear-gradient(to bottom, var(--background-color-1), var(--background-color-2)) no-repeat center center;
+    background: linear-gradient(to bottom, var(--background-color-1), var(--background-color-2)) no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     overflow: none;
 }
