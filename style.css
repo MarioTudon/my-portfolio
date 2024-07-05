@@ -29,6 +29,7 @@ hr,
 img {
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 html {
@@ -37,7 +38,8 @@ html {
 
 body {
     min-height: 100vh;
-    background: linear-gradient(to bottom, var(--background-color-1), var(--background-color-2));
+    background: linear-gradient(to bottom, var(--background-color-1), var(--background-color-2)) no-repeat center center fixed;
+    background-size: cover;
     overflow: none;
 }
 
