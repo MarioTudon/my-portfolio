@@ -16,6 +16,7 @@
     --hr-color: #03585e;
 }
 
+html,
 body,
 p,
 span,
@@ -32,16 +33,17 @@ img {
     user-select: none;
 }
 
-html {
+html, body {
+    margin: 0;
+    padding: 0;
     height: 100%;
 }
 
-body {
-    min-height: 100vh;
-    background: linear-gradient(to bottom, var(--background-color-1), var(--background-color-2)) no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    overflow: none;
+#content {
+    min-height: 100%;
+    background: linear-gradient(to bottom, var(--background-color-1), var(--background-color-2));
+    display: flex;
+    flex-direction: column;
 }
 
 header {
