@@ -177,9 +177,10 @@ h3 {
     }
 
     img {
-        width: 12rem;
+        border: solid .25rem var(--background-color-5);
+        width: 10rem;
         border-radius: 50%;
-        padding-bottom: 2rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -450,8 +451,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 500px) {
-
+@media screen and (min-width: 1300px) {
     header {
         display: flex;
         flex-direction: row;
@@ -584,6 +584,7 @@ footer {
         h2 {
             padding-top: 2rem;
             font-size: 4rem;
+            text-align: center;
         }
 
         h3 {
@@ -595,20 +596,20 @@ footer {
         img {
             width: 18rem;
             border-radius: 50%;
-            padding-bottom: 3rem;
             transition: 0.5s;
-            animation-delay: 0.75s;
+            margin-bottom: 2rem;
         }
 
         img:hover {
-            padding-top: 2rem;
-            transform: scale(1.3);
+            margin-top: 3rem;
+            margin-bottom: 3.5rem;
+            transform: scale(1.2);
         }
     }
 
     #about-me {
         p {
-            padding: 3rem 25rem;
+            margin: 3rem 25rem;
             text-align: justify;
             font-size: 1.2rem;
             font-weight: 500;
@@ -762,4 +763,318 @@ footer {
             font-size: 0.8rem;
         }
     }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: var(--background-color-4);
+
+        #mobile-header {
+            display: none;
+        }
+
+        #landscape-icon {
+            display: unset;
+            margin-left: 2rem;
+            width: 2rem;
+            transition: 1s;
+        }
+
+        #landscape-icon:hover {
+            transform: rotate(360deg) scale(1.25);
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex: 2;
+            width: auto;
+            height: auto;
+
+            a {
+                font-size: 1rem;
+                text-decoration: none;
+                color: var(--text-1);
+                margin: 0 1rem;
+                border: 0.05rem solid transparent;
+                width: auto;
+                transition: 0.5s;
+            }
+
+            a:hover {
+                border-bottom: 0.05rem solid var(--background-color-7);
+                color: var(--text-hover-color);
+            }
+        }
+
+        .social-icons-container {
+            width: auto;
+            margin-right: 2rem;
+
+            .social-icons {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+
+                a {
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        --social-icon-width: 1.5rem;
+                        --social-icon-height: var(--social-icon-width);
+                        width: var(--social-icon-width);
+                        height: var(--social-icon-height);
+                        border-radius: 50%;
+
+                        rect {
+                            fill: var(--social-icon-color);
+                            transition: 0.3s;
+                        }
+
+                        circle {
+                            fill: var(--background-color-4);
+                        }
+
+                        path {
+                            fill: var(--background-color-4);
+                            stroke: var(--background-color-4);
+                        }
+
+                        .youtube-arrow {
+                            fill: var(--social-icon-color);
+                            transition: 0.3s;
+                        }
+                    }
+                }
+
+                a:hover {
+                    svg {
+                        transform: scale(1.2);
+
+                        rect {
+                            fill: var(--effect-hover-color);
+                        }
+
+                        circle {
+                            fill: var(--background-color-4);
+                        }
+
+                        path {
+                            fill: var(--background-color-4);
+                            stroke: var(--background-color-4);
+                        }
+
+                        .youtube-arrow {
+                            fill: var(--effect-hover-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    h2 {
+        color: var(--text-1);
+        text-transform: uppercase;
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        color: var(--text-2);
+        font-size: 1.5rem;
+    }
+
+    .presentation-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            padding-top: 2rem;
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        h3 {
+            padding: 0.5rem 0;
+            font-size: 2rem;
+            animation-delay: 0.5s;
+        }
+
+        img {
+            width: 18rem;
+            border-radius: 50%;
+            margin-bottom: 3rem;
+            transition: 0.5s;
+        }
+
+        img:hover {
+            margin-top: 2rem;
+            transform: scale(1.3);
+        }
+    }
+
+    #about-me {
+        p {
+            padding: 3rem 8rem;
+            text-align: justify;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding-bottom: 2rem;
+        }
+    }
+
+    #projects {
+        .project-section {
+            display: flex;
+            flex-direction: row;
+
+            .project-card {
+                width: 20rem;
+                margin: 1rem 0.75rem;
+                padding: 0;
+
+                img {
+                    border-radius: 0;
+                    transition: 0.5s;
+                }
+
+                img:hover {
+                    transform: scale(1.2);
+                    border-radius: 0.5rem;
+                }
+
+                .project-description {
+                    padding: 1rem;
+                }
+
+                button {
+                    font-size: 1rem;
+                    transition: 0.2s;
+                }
+
+                button:hover {
+                    background-color: var(--background-color-6);
+
+                    a {
+                        color: var(--text-hover-color);
+                    }
+                }
+            }
+        }
+    }
+
+    #skills {
+        .skills-container {
+            padding: 0;
+        }
+    }
+
+    #contact {
+
+        input[type="email"],
+        textarea {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 600;
+            font-size: 0.8rem;
+            background-color: var(--background-color-7);
+            border: none;
+            border-radius: 0.4rem;
+            padding: 0.25rem 0.75rem;
+            margin: 0.5rem 0 0.75rem;
+            width: 20rem;
+        }
+
+        input[type="email"]::placeholder,
+        textarea::placeholder {
+            font-family: "Ubuntu", sans-serif;
+            color: var(--text-5);
+            font-weight: 300;
+        }
+
+        button {
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: var(--background-color-6);
+            transform: scale(1.2);
+            color: var(--text-hover-color);
+        }
+    }
+
+    footer {
+        width: 50%;
+
+        .social-icons-container {
+            .social-icons {
+                a {
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        --social-icon-width: 2rem;
+                        --social-icon-height: var(--social-icon-width);
+                        width: var(--social-icon-width);
+                        height: var(--social-icon-height);
+                        border-radius: 50%;
+
+                        rect {
+                            fill: var(--social-icon-color);
+                            transition: 1s;
+                        }
+
+                        circle {
+                            fill: var(--background-color-2);
+                        }
+
+                        path {
+                            fill: var(--background-color-2);
+                            stroke: var(--background-color-2);
+                        }
+
+                        .youtube-arrow {
+                            fill: var(--social-icon-color);
+                            transition: 1s;
+                        }
+                    }
+                }
+
+                a:hover {
+                    svg {
+                        transform: scale(1.2);
+
+                        rect {
+                            fill: var(--effect-hover-color);
+                        }
+
+                        circle {
+                            fill: var(--background-color-2);
+                        }
+
+                        path {
+                            fill: var(--background-color-2);
+                            stroke: var(--background-color-2);
+                        }
+
+                        .youtube-arrow {
+                            fill: var(--effect-hover-color);
+                        }
+                    }
+                }
+            }
+        }
+
+        span {
+            font-size: 0.8rem;
+        }
+    }
+    
 }
