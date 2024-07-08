@@ -104,6 +104,7 @@ header {
         align-items: center;
         width: 100%;
         background-color: var(--background-color-4);
+        padding: 0.8rem 0;
 
         .social-icons {
             display: grid;
@@ -111,7 +112,6 @@ header {
             gap: 1.5rem;
             
             svg {
-                padding: 0.8rem 0;
                 --social-icon-width: 2rem;
                 --social-icon-height: var(--social-icon-width);
                 width: var(--social-icon-width);
