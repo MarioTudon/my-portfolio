@@ -1078,3 +1078,32 @@ footer {
     }
     
 }
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+    #projects {
+        .project-section {
+            display: flex;
+            flex-direction: row;
+
+            .project-card {
+                width: 20rem;
+                margin: 1rem 0.75rem;
+                padding: 0;
+
+                img {
+                    border-radius: 0;
+                    transition: 0.5s;
+                }
+
+                .project-description {
+                    padding: 1rem;
+                }
+
+                button {
+                    font-size: 1rem;
+                    transition: 0.2s;
+                }
+            }
+        }
+    }
+}
