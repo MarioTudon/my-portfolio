@@ -24,6 +24,10 @@ html {
     height: 100%;
 }
 
+iframe {
+    width: 100vw;
+}
+
 /* The typing effect */
 @keyframes typing {
     from {
@@ -48,12 +52,113 @@ html {
     }
 }
 
+@keyframes animate1 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes animate4 {
+    0% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
 body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 20% 80%;
-    background-color: var(--main-color);
+    background: black;
+    pointer-events: none;
+    color: white;
 
+    #background {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to bottom, #04090c, #0d141a, #1a2025);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        position: fixed;
+        z-index: -1;
+
+        .row {
+            position: relative;
+            top: -50%;
+            width: 100%;
+            display: flex;
+            padding: 10px 0;
+            white-space: nowrap;
+            font-size: 80px;
+            transform: rotate(-30deg);
+
+            div {
+                animation: animate1 80s linear infinite;
+                animation-delay: -80s;
+
+                i {
+                    color: rgba(0, 0, 0, 1);
+                    transition: 0.5s;
+                    padding: 0 5px;
+                    user-select: none;
+                    cursor: default;
+                    pointer-events: all;
+
+                    &:hover {
+                        color: #12fdb6;
+                        text-shadow: 0 0 70px #12fdb6;
+                    }
+                }
+            }
+
+            div:nth-child(2) {
+                animation: animate2 80s linear infinite;
+                animation-delay: -40s;
+            }
+        }
+
+        .row:nth-child(even) {
+            div {
+                animation: animate3 80s linear infinite;
+                animation-delay: -80s;
+
+            }
+
+            div:nth-child(2) {
+                animation: animate4 80s linear infinite;
+                animation-delay: -40s;
+            }
+        }
+    }
 
     header {
         grid-column: 1/2;
@@ -61,13 +166,13 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: var(--complementary-color);
+        background: var(--complementary-color);
+        pointer-events: all;
 
         img {
             border-radius: 50%;
             width: 12rem;
             margin: 1rem 0;
-            border: solid 0.25rem var(--light-color);
         }
 
         hr {
@@ -111,6 +216,7 @@ body {
         justify-content: center;
         user-select: none;
         position: relative;
+        color: white;
 
         h2 {
             text-transform: uppercase;
@@ -153,6 +259,7 @@ body {
                 border-radius: 50%;
                 margin: 0 1rem;
                 transition: transform 0.2s ease;
+                pointer-events: all;
 
                 rect {
                     fill: var(--complementary-color);
@@ -160,12 +267,12 @@ body {
                 }
 
                 circle {
-                    fill: var(--main-color);
+                    fill: #111;
                 }
 
                 path {
-                    fill: var(--main-color);
-                    stroke: var(--main-color);
+                    fill: #111;
+                    stroke: #111;
                 }
 
                 .youtube-arrow {
@@ -282,7 +389,7 @@ body {
                 padding: 1.5rem;
                 margin: 2rem;
                 position: relative;
-                border: solid 0.2rem var(--neutral-color-2);
+                pointer-events: all;
 
                 img {
                     width: calc(var(--images-size)/3);
@@ -325,7 +432,7 @@ body {
 
                     span {
                         background-color: var(--dark-color);
-                        color: var(--light-color);
+                        color: white;
                         transform: translate(-50%, -120%);
 
                         &::after {
@@ -362,6 +469,7 @@ body {
             justify-content: space-evenly;
             align-items: center;
             width: 30%;
+            pointer-events: all;
 
             div {
                 background-color: var(--complementary-color);
@@ -379,22 +487,27 @@ body {
             }
         }
 
-        #education-career, #work-career {
+        #education-career,
+        #work-career {
             display: flex;
             flex-direction: column;
             text-align: center;
             align-items: center;
+            pointer-events: all;
+
             hr {
                 width: 100%;
             }
-            
-            .education {
+
+            .career-paragraph {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-               p {
+
+                p {
                     margin: 0 0 1rem;
                 }
+
                 text-transform: uppercase;
             }
 
