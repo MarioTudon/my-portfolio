@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             educationCareer.classList.add('hide');
             workCareer.classList.add('hide');
         }
-        educationActive = !active;
+        educationActive = !educationActive;
         workActive = false;
     });
     workButton.addEventListener('click', () => {
